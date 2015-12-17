@@ -42,5 +42,5 @@ var hsRouter = express.Router();
 		});
 	});
 app.use('/api',hsRouter);
-app.listen(process.env.NODE_ENV);
+app.listen(process.env.OPENSHIFT_NODEJS_PORT);
 console.log('Server running on port 8080');

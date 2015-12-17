@@ -1,0 +1,16 @@
+{
+  "name": "ARithmeticWS",
+  "version": "1.0.0",
+  "description": "ARithmetic High Score Webservice",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Julio Cristian Young",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.13.3",
+    "body-parser": "~1.9.3",
+    "mongoose": "^4.1.1"
+  }
+}

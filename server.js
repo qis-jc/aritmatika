@@ -15,8 +15,7 @@ app.use(function(req, res, next) {
 	Authorization');
 	next();
 });
-var mongo_url = process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME;
-mongoose.connect(mongo_url);
+mongoose.connect('mongodb://localhost/aritmatika');
 
 var hsRouter = express.Router();
 	hsRouter.post('/highscore',function(req,res){
@@ -42,5 +41,5 @@ var hsRouter = express.Router();
 		});
 	});
 app.use('/api',hsRouter);
-app.listen(process.env.OPENSHIFT_NODEJS_PORT);
+app.listen(process.env.PORT);
 console.log('Server running on port 8080');

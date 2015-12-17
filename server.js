@@ -42,5 +42,5 @@ var hsRouter = express.Router();
 		});
 	});
 app.use('/api',hsRouter);
-app.listen(8080);
+app.listen(process.env.NODE_ENV);
 console.log('Server running on port 8080');

@@ -15,8 +15,8 @@ app.use(function(req, res, next) {
 	Authorization');
 	next();
 });
-
-mongoose.connect('mongodb://localhost/db_name');
+var mongo_url = process.env.OPENSHIFT_MONGODB_DB_URL + process.env.OPENSHIFT_APP_NAME;
+mongoose.connect(mongo_url);
 
 var hsRouter = express.Router();
 	hsRouter.post('/highscore',function(req,res){
